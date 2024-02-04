@@ -3,12 +3,27 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | NSMB-MarioVsLuigi</title>
+    <title>NSMB: MarioVsLuigi</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1243556789546662"
      crossorigin="anonymous"></script>
+     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('frankymilky.png'); /* Replace 'your-image.png' with the path to your image */
+            background-repeat: repeat;
+            background-size: 40px 40px; /* Adjust the size as needed */
+            text-align: center;
+        }
+        canvas {
+            width: 960px;
+            height: 540px;
+            background: #231F20;
+        }
+     </style>
   </head>
-  <body style="text-align: center">
-    <canvas id="unity-canvas" width=960 height=540 style="width: 960px; height: 540px; background: #231F20"></canvas>
+  <body>
+    <canvas id="unity-canvas"></canvas>
     <script src="Build/MarioVsLuigi-WebGL.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -22,14 +37,4 @@
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/MarioVsLuigi-WebGL.data.unityweb",
         frameworkUrl: "Build/MarioVsLuigi-WebGL.framework.js.unityweb",
-        codeUrl: "Build/MarioVsLuigi-WebGL.wasm.unityweb",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "ipodtouch0218",
-        productName: "NSMB-MarioVsLuigi",
-        productVersion: "1.7.1.0-beta",
-        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-      });
-    </script>
-  </body>
-</html>
+        codeUrl: "Build/Mar
