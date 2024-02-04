@@ -10,20 +10,26 @@
         body {
             margin: 0;
             padding: 0;
+            text-align: center;
+        }
+        #canvas-container {
             background: url('frankymilky.png'); /* Replace 'your-image.png' with the path to your image */
             background-repeat: repeat;
             background-size: 40px 40px; /* Adjust the size as needed */
-            text-align: center;
         }
         canvas {
-            width: 960px;
-            height: 540px;
+            width: 954px; /* Adjusted to accommodate the 3px border on each side */
+            height: 534px; /* Adjusted to accommodate the 3px border on each side */
             background: #231F20;
+            border: 3px solid black;
+            box-sizing: border-box;
         }
      </style>
   </head>
   <body>
-    <canvas id="unity-canvas"></canvas>
+    <div id="canvas-container">
+        <canvas id="unity-canvas"></canvas>
+    </div>
     <script src="Build/MarioVsLuigi-WebGL.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
